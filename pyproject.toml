@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-scriptconv-g2p-plugin"
+dynamic = ["version"]
+description = "OPM G2P plugin over scriptconv: 45 phonemizers behind one config switch"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "jarbasai", email = "jarbasai@mailfence.com"}
+]
+keywords = ["ovos", "plugin", "g2p", "phonemizer", "ipa", "scriptconv"]
+dependencies = [
+    "ovos-plugin-manager>=2.1.0,<3.0.0",
+    "scriptconv>=0.0.4a19,<1.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/TigreGotico/ovos-scriptconv-g2p-plugin"
+
+[project.entry-points."opm.g2p"]
+"ovos-scriptconv-g2p-plugin" = "ovos_scriptconv_g2p_plugin:ScriptconvG2PPlugin"
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_scriptconv_g2p_plugin.version.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ovos_scriptconv_g2p_plugin*"]
