@@ -17,6 +17,9 @@ dependencies = [
     "scriptconv>=0.0.4a19,<1.0.0"
 ]
 
+[project.optional-dependencies]
+test = ["pytest", "orthography2ipa", "espyak"]
+
 [project.urls]
 Homepage = "https://github.com/TigreGotico/ovos-scriptconv-g2p-plugin"
 
