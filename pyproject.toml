@@ -13,7 +13,7 @@ authors = [
 ]
 keywords = ["ovos", "plugin", "g2p", "phonemizer", "ipa", "scriptconv"]
 dependencies = [
-    "ovos-plugin-manager>=2.1.0,<3.0.0",
+    "ovos-plugin-manager>=2.2.0,<3.0.0",
     "scriptconv>=0.0.4a19,<1.0.0"
 ]
 
